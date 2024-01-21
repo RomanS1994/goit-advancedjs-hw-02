@@ -34,7 +34,7 @@ const options = {
     } else {
       iziToast.success({
         title: 'Hey',
-        message: 'Сlick on the Start button',
+        message: 'Click on the Start button',
         position: 'topRight',
       });
 
