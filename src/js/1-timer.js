@@ -25,13 +25,13 @@ const refs = {
   dataMinutes: document.querySelector('[data-minutes]'),
   dataSeconds: document.querySelector('[data-seconds]'),
 };
-
 const { input, button } = refs;
 const { dataDays, dataHours, dataMinutes, dataSeconds } = refs;
 
 let userSelectedDate;
 let today = new Date();
 
+// додкаткові опції бібліотеки flatpickr
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -57,6 +57,7 @@ const options = {
   },
 };
 
+// ініціалізація бібліотеки
 flatpickr(input, options);
 
 function convertMs(ms) {
@@ -78,6 +79,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
+// Прослуховувач події 'click'
 button.addEventListener('click', handlerClick);
 
 function handlerClick() {
@@ -100,6 +102,7 @@ function handlerClick() {
   }, 1000);
 }
 
+// функція форматування числа
 function addLeadingZero(value) {
   return value.toString().padStart(2, '0');
 }
