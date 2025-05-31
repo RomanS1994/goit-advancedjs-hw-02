@@ -51,7 +51,9 @@ const options = {
         messageSize: '20',
       });
       button.disabled = true;
+      input.disabled = true;
     } else {
+      input.disabled = false;
       button.disabled = false;
     }
   },
