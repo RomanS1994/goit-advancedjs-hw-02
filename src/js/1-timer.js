@@ -51,9 +51,7 @@ const options = {
         messageSize: '20',
       });
       button.disabled = true;
-      input.disabled = true;
     } else {
-      input.disabled = false;
       button.disabled = false;
     }
   },
@@ -90,6 +88,7 @@ function handlerClick() {
 
     const difference = userSelectedDate - today;
     button.disabled = true;
+    input.disabled = true;
 
     if (difference > 0) {
       const data = convertMs(difference);
@@ -100,6 +99,7 @@ function handlerClick() {
       dataSeconds.textContent = addLeadingZero(data.seconds);
     } else {
       button.disabled = false;
+      input.disabled = false;
     }
   }, 1000);
 }
